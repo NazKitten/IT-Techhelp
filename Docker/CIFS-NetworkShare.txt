@@ -1,0 +1,24 @@
+Common Internet File Share:
+
+This is going to tell you what you should include in your Docker Compose if you need to use a network share in a docker container but need it to be in a volume so its a pressitant use but allow for external Modification. 
+
+Once you have your compose file ready for the Container you want to use, insert this before your service starts. 
+[Tip was found in this Reddit Article, solution provided by u/FluffyMumbles] https://www.reddit.com/r/docker/comments/yc7n1z/network_share_as_volume/
+
+
+volumes:
+  [Name of volume to create and bind to]:
+    driver_opts:
+      type: cifs
+      o: "username=guest,password=guest,vers=3.0"
+      device: "//${MEDIA_SERVER}/Media/"
+
+services:
+  [Container name]:
+    image: [Image you want to use]
+    ports:
+      - 4533:4533
+    volumes:
+      - ./volumes/navidrome/data:/data
+      - network_music:/music:ro
+    restart: unless-stopped
