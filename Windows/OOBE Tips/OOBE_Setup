@@ -5,6 +5,8 @@ a@a.com - Short and sweet to the point
 no@thankyou.com - Alternative if you want to say no. 
 
 Password: 
-There is no password one would need to use, hit the space bar once and hit next. Usually the error 'Oops, couldnt sign into the account' Will appear but should start asking for local user information. This is recommened if you cant get to the option for domain join (that forces you to setup local login, wont ask for domain). 
+There is no password one would need to use, hit the space bar once and hit next. 
+Usually the error 'Oops, couldnt sign into the account' Will appear but should start asking for local user information. 
+This is recommened if you cant get to the option for domain join (that forces you to setup local login, wont ask for domain). 
 
 Follow these steps on Home machines, it will still work on Pro and above. 
